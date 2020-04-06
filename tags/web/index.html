@@ -38,27 +38,27 @@
   <meta name="description" content="我的理想很简单：一屋，二人，三餐，四季。仅此而已。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="晗大大の博客">
-<meta property="og:url" content="https://q1021185180.github.io/index.html">
+<meta property="og:url" content="https://q1021185180.github.io/tags/web/index.html">
 <meta property="og:site_name" content="晗大大の博客">
 <meta property="og:description" content="我的理想很简单：一屋，二人，三餐，四季。仅此而已。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="晗大大">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://q1021185180.github.io/">
+<link rel="canonical" href="https://q1021185180.github.io/tags/web/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
+    isHome : false,
     isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>晗大大の博客</title>
+  <title>标签: web | 晗大大の博客</title>
   
 
 
@@ -175,98 +175,47 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content tag">
             
-    
+
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://q1021185180.github.io/2020/04/06/hexo-frist/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/Me.jpg">
-      <meta itemprop="name" content="晗大大">
-      <meta itemprop="description" content="我的理想很简单：一屋，二人，三餐，四季。仅此而已。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="晗大大の博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/06/hexo-frist/" class="post-title-link" itemprop="url">试水</a>
+  
+  <div class="post-block">
+    <div class="posts-collapse">
+      <div class="collection-title">
+        <h2 class="collection-header">web
+          <small>标签</small>
         </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-06 20:48:43 / 修改时间：21:00:20" itemprop="dateCreated datePublished" datetime="2020-04-06T20:48:43+08:00">2020-04-06</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span></span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>NaN:aN</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+      </div>
 
       
-          <h2 id="Java编码规范整理汇总"><a href="#Java编码规范整理汇总" class="headerlink" title="Java编码规范整理汇总"></a>Java编码规范整理汇总</h2><p>在Java的入门过程中，我们首先要养成一个良好的编写代码习惯。那么，了解清楚Java的编码规范就显得尤为必要了。编码格式不仅仅是美不美观的问题。这里我们可以试想一下，如果在Java开发中编码不规范，容易出现bug不说，而且后续还难以维护。因此，遵守编码规范可以让代码的风格好像是一个人写出来的，即使是有很多人参与这个开发项目。</p>
-<p>1、源文件基础</p>
-<p>源文件以其最顶层的类名来命名，大小写敏感，文件扩展名为 .java。源文件编码格式为UTF-8。除了行结束符序列，ASCII水平空格字符(0x20，即空格)是源文件中唯一允许出现的空白字符，这意味着所有其它字符串中的空白字符都要进行转义；制表符不用于缩进。对于具有特殊转义序列的任何字符(\b, \t, \n, \f, \r, “, ‘及)，我们使用它的转义序列，而不是相应的八进制(比如 \012)或Unicode(比如 \u000a)转义。对于剩余的非ASCII字符，是使用实际的Unicode字符(比如∞)，还是使用等价的Unicode转义符(比如\u221e)，取决于哪个能让代码更易于阅读和理解。</p>
-<p>2、源文件结构</p>
-<p>一个源文件包含(按顺序地)：许可证或版权信息；package语句；import语句；一个顶级类。以上每个部分之间用一个空行隔开。如果一个文件包含许可证或版权信息，那么它应当被放在文件最前面。package语句不换行，列限制(4.4节)并不适用于package语句。import不要使用通配符，不要换行。</p>
-<p>3、格式</p>
-<p>大括号与 if,else,for,do,while语句一起使用，即使只有一条语句(或是空)，也应该把大括号写上。对于非空块和块状结构，大括号遵循Kernighan和Ritchie风格，左大括号前不换行；左大括号后换行；右大括号前换行；如果右大括号是一个语句、函数体或类的终止，则右大括号后换行; 否则不换行。例如，如果右大括号后面是else或逗号，则不换行。一个空的块状结构里什么也不包含，大括号可以简洁地写成 {}，不需要换行。例外：如果它是一个多块语句的一部分(if/else 或 try/catch/finally) ，即使大括号内没内容，右大括号也要换行。每当开始一个新的块，缩进增加2个空格，当块结束时，缩进返回先前的缩进级别。缩进级别适用于代码和注释。</p>
-<p>4、空白</p>
-<p>以下情况需要使用一个空行：类内连续的成员之间：字段，构造函数，方法，嵌套类，静态初始化块，实例初始化块；在函数体内，语句的逻辑分组间使用空行；类内的第一个成员前或最后一个成员后的空行是可选；要满足本文档中其他节的空行要求。除了语言需求和其它规则，并且除了文字，注释和Javadoc用到单个空格，单个ASCII空格也出现在以下几个地方：分隔任何保留字与紧随其后的左括号( ()(如 if,forcatch等)；分隔任何保留字与其前面的右大括号( })(如 else,catch)等等。</p>
-<p>5、命名约定</p>
-<p>对所有标识符都通用的规则，标识符只能使用ASCII字母和数字，因此每个有效的标识符名称都能匹配正则表达式 \w+。类名都以 UpperCamelCase风格编写，方法名都以 lowerCamelCase风格编写；常量名命名模式为 CONSTANT_CASE，全部字母大写，用下划线分隔单词；非常量字段名以 lowerCamelCase风格编写；参数名以 lowerCamelCase风格编写；比起其它类型的名称，局部变量名可以有更为宽松的缩写。、</p>
-<p>6、编程实践</p>
-<p>只要是合法的，就把 @override注解给用上。使用类名调用静态的类成员，而不是具体某个对象或表达式。极少会去重写 Object.finalize。</p>
-
-      
+    <div class="collection-year">
+      <span class="collection-header">2020</span>
     </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-04-06T20:48:43+08:00"
+              content="2020-04-06">
+          04-06
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/2020/04/06/hexo-frist/" itemprop="url">
+            <span itemprop="name">试水</span>
+          </a>
+      </div>
+
+    </header>
   </article>
+
+    </div>
+  </div>
   
   
   
