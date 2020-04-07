@@ -6,6 +6,8 @@
     <content><![CDATA[<p>16毫秒 / 帧速率<br>Frame Rate。</p>
 <p>电子游戏使用的光栅显示器是普通电视时，图像一般每秒更新60次。图像更新的时间叫做帧，1秒60次即1次16毫秒（0.0167秒 = 16.7毫秒）。</p>
 <p>16毫秒是玩家可以识别的游戏画面改变的最短时间间隔。</p>
+<a id="more"></a>
+
 <p>ARPG<br>Action Role Playing Game。</p>
 <p>角色扮演类游戏中动作性较强的实时游戏，也指包含冒险游戏特征的游戏。</p>
 <p>bot<br>外挂。模拟游戏玩家自动访问游戏服务器、高效率地进行游戏、积累分数以及进行恶意的经济欺诈的程序。</p>
@@ -110,9 +112,38 @@
       </tags>
   </entry>
   <entry>
-    <title>试水</title>
+    <title>了解C#(一)</title>
+    <url>/2020/04/07/c/</url>
+    <content><![CDATA[<p>创建控制台应用程序，依次选择“文件”一“新建”一“项目”命令，弹出如下图所示的对话框。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314105503344.png" alt></p>
+<a id="more"></a>
+<p>在其中选择“控制台应用程序”选项，并为该项目设置名称、位置以及解决方案名称，单击“确定”按钮即可创建控制台应用程序，效果如下图所示。<br>需要注意解决方案名称不一定与项目名称相同，在同一个解决方案中允许设置多个项目.<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314110349604.png" alt><br>从上图所示的界面中可以看出在解决方案资源管理器中创建了一个名为 Solution 的解决方案，并在该解决方案中创建了一个名为 Test 的控制台应用程序。</p>
+<p>在 Test 应用程序中包含了一个名为 Program.cs的类文件，该文件中的代码如下图所示。</p>
+<p>在该代码中的第 11 行到第 13 行是 Main 方法，Main 方法是一个特殊的方法，并且在每个类中只能有一个，只需要将代码写到 Main 方法中，在项目运行后 Main 方法中的代码就会执行。</p>
+<p>在控制台应用 程序的控制台界面中输出内容的方法如下。<br>Console.Write();  //向控制台界面不换行输出内容<br>Console.WriteLine(); //向控制台界面换行输出内容<br>下面使用控制台应用程序向控制台输出“第一个 C# 程序”和“这是一个控制台应用程序”，实现的代码如下。<br>namespace test<br>{<br>    class Program<br>    {<br>        static void Main(string[] args)<br>        {<br>            Console.WriteLine(“第一个 C# 程序”);<br>            Console.WriteLine(“这是第一个控制台程序”);<br>        }<br>    }<br>}<br>按 Ctrl+F5 组合键运行程序，效果如下图所示。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314111351418.png" alt><br>关于使用 Console.Write() 方法来完成输出信息的操作请自行尝试并查看运行的效果。</p>
+]]></content>
+      <categories>
+        <category>unity</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo搭建（空）</title>
+    <url>/2020/04/07/hexo%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>hexo博客搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>java代码书写规范</title>
     <url>/2020/04/06/hexo-frist/</url>
     <content><![CDATA[<h2 id="Java编码规范整理汇总"><a href="#Java编码规范整理汇总" class="headerlink" title="Java编码规范整理汇总"></a>Java编码规范整理汇总</h2><p>在Java的入门过程中，我们首先要养成一个良好的编写代码习惯。那么，了解清楚Java的编码规范就显得尤为必要了。编码格式不仅仅是美不美观的问题。这里我们可以试想一下，如果在Java开发中编码不规范，容易出现bug不说，而且后续还难以维护。因此，遵守编码规范可以让代码的风格好像是一个人写出来的，即使是有很多人参与这个开发项目。</p>
+<a id="more"></a>
 <p>1、源文件基础</p>
 <p>源文件以其最顶层的类名来命名，大小写敏感，文件扩展名为 .java。源文件编码格式为UTF-8。除了行结束符序列，ASCII水平空格字符(0x20，即空格)是源文件中唯一允许出现的空白字符，这意味着所有其它字符串中的空白字符都要进行转义；制表符不用于缩进。对于具有特殊转义序列的任何字符(\b, \t, \n, \f, \r, “, ‘及)，我们使用它的转义序列，而不是相应的八进制(比如 \012)或Unicode(比如 \u000a)转义。对于剩余的非ASCII字符，是使用实际的Unicode字符(比如∞)，还是使用等价的Unicode转义符(比如\u221e)，取决于哪个能让代码更易于阅读和理解。</p>
 <p>2、源文件结构</p>
