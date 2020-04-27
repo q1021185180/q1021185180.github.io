@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>了解C#(一)</title>
-    <url>/2020/04/07/c/</url>
-    <content><![CDATA[<p>创建控制台应用程序，依次选择“文件”一“新建”一“项目”命令，弹出如下图所示的对话框。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314105503344.png" alt></p>
+    <title>IDEA中Git的更新、提交与还原方法</title>
+    <url>/2020/04/27/IDEA%E4%B8%ADGit%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81%E6%8F%90%E4%BA%A4%E4%B8%8E%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；<br><img src="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
 <a id="more"></a>
-<p>在其中选择“控制台应用程序”选项，并为该项目设置名称、位置以及解决方案名称，单击“确定”按钮即可创建控制台应用程序，效果如下图所示。<br>需要注意解决方案名称不一定与项目名称相同，在同一个解决方案中允许设置多个项目.<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314110349604.png" alt><br>从上图所示的界面中可以看出在解决方案资源管理器中创建了一个名为 Solution 的解决方案，并在该解决方案中创建了一个名为 Test 的控制台应用程序。</p>
-<p>在 Test 应用程序中包含了一个名为 Program.cs的类文件，该文件中的代码如下图所示。</p>
-<p>在该代码中的第 11 行到第 13 行是 Main 方法，Main 方法是一个特殊的方法，并且在每个类中只能有一个，只需要将代码写到 Main 方法中，在项目运行后 Main 方法中的代码就会执行。</p>
-<p>在控制台应用 程序的控制台界面中输出内容的方法如下。<br>Console.Write();  //向控制台界面不换行输出内容<br>Console.WriteLine(); //向控制台界面换行输出内容<br>下面使用控制台应用程序向控制台输出“第一个 C# 程序”和“这是一个控制台应用程序”，实现的代码如下。<br>namespace test<br>{<br>    class Program<br>    {<br>        static void Main(string[] args)<br>        {<br>            Console.WriteLine(“第一个 C# 程序”);<br>            Console.WriteLine(“这是第一个控制台程序”);<br>        }<br>    }<br>}<br>按 Ctrl+F5 组合键运行程序，效果如下图所示。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314111351418.png" alt><br>关于使用 Console.Write() 方法来完成输出信息的操作请自行尝试并查看运行的效果。</p>
+<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；<br><img src="https://img-blog.csdn.net/20171120192417714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第三步：1.当确定第二步操作完之后，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://img-blog.csdn.net/20171120192659004?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193357463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>3.进行commit Directory操作 如图7：<br><img src="https://img-blog.csdn.net/20171120193846925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://img-blog.csdn.net/20171120194127109?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://img-blog.csdn.net/20171120195312180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://img-blog.csdn.net/20171120195941337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
+<p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>
 ]]></content>
       <categories>
-        <category>unity</category>
+        <category>git</category>
       </categories>
       <tags>
-        <tag>C#</tag>
+        <tag>git</tag>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -155,6 +154,23 @@
       </tags>
   </entry>
   <entry>
+    <title>了解C#(一)</title>
+    <url>/2020/04/07/c/</url>
+    <content><![CDATA[<p>创建控制台应用程序，依次选择“文件”一“新建”一“项目”命令，弹出如下图所示的对话框。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314105503344.png" alt></p>
+<a id="more"></a>
+<p>在其中选择“控制台应用程序”选项，并为该项目设置名称、位置以及解决方案名称，单击“确定”按钮即可创建控制台应用程序，效果如下图所示。<br>需要注意解决方案名称不一定与项目名称相同，在同一个解决方案中允许设置多个项目.<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314110349604.png" alt><br>从上图所示的界面中可以看出在解决方案资源管理器中创建了一个名为 Solution 的解决方案，并在该解决方案中创建了一个名为 Test 的控制台应用程序。</p>
+<p>在 Test 应用程序中包含了一个名为 Program.cs的类文件，该文件中的代码如下图所示。</p>
+<p>在该代码中的第 11 行到第 13 行是 Main 方法，Main 方法是一个特殊的方法，并且在每个类中只能有一个，只需要将代码写到 Main 方法中，在项目运行后 Main 方法中的代码就会执行。</p>
+<p>在控制台应用 程序的控制台界面中输出内容的方法如下。<br>Console.Write();  //向控制台界面不换行输出内容<br>Console.WriteLine(); //向控制台界面换行输出内容<br>下面使用控制台应用程序向控制台输出“第一个 C# 程序”和“这是一个控制台应用程序”，实现的代码如下。<br>namespace test<br>{<br>    class Program<br>    {<br>        static void Main(string[] args)<br>        {<br>            Console.WriteLine(“第一个 C# 程序”);<br>            Console.WriteLine(“这是第一个控制台程序”);<br>        }<br>    }<br>}<br>按 Ctrl+F5 组合键运行程序，效果如下图所示。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314111351418.png" alt><br>关于使用 Console.Write() 方法来完成输出信息的操作请自行尝试并查看运行的效果。</p>
+]]></content>
+      <categories>
+        <category>unity</category>
+      </categories>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>国家机密</title>
     <url>/2020/04/11/hexo%E6%90%AD%E5%BB%BA/%E5%9B%BD%E5%AE%B6%E6%9C%BA%E5%AF%86/</url>
     <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -171,22 +187,6 @@
       </categories>
       <tags>
         <tag>机密文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>IDEA中Git的更新、提交与还原方法</title>
-    <url>/2020/04/27/IDEA%E4%B8%ADGit%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81%E6%8F%90%E4%BA%A4%E4%B8%8E%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；<br><img src="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
-<a id="more"></a>
-<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；<br><img src="https://img-blog.csdn.net/20171120192417714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第三步：1.当确定第二步操作完之后，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://img-blog.csdn.net/20171120192659004?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193357463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>3.进行commit Directory操作 如图7：<br><img src="https://img-blog.csdn.net/20171120193846925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://img-blog.csdn.net/20171120194127109?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://img-blog.csdn.net/20171120195312180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://img-blog.csdn.net/20171120195941337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
-<p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>
-]]></content>
-      <categories>
-        <category>git</category>
-      </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>git</tag>
       </tags>
   </entry>
 </search>
