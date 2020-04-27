@@ -1,192 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>IDEA中Git的更新、提交与还原方法</title>
-    <url>/2020/04/27/IDEA%E4%B8%ADGit%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81%E6%8F%90%E4%BA%A4%E4%B8%8E%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/</url>
-    <content><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；<br><img src="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
-<a id="more"></a>
-<p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；<br><img src="https://img-blog.csdn.net/20171120192417714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第三步：1.当确定第二步操作完之后，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://img-blog.csdn.net/20171120192659004?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193357463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>3.进行commit Directory操作 如图7：<br><img src="https://img-blog.csdn.net/20171120193846925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://img-blog.csdn.net/20171120194127109?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://img-blog.csdn.net/20171120195312180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://img-blog.csdn.net/20171120195941337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
-<p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Spring MVC(一)</title>
+      <link href="/2020/04/27/Spring-MVC-%E4%B8%80/"/>
+      <url>/2020/04/27/Spring-MVC-%E4%B8%80/</url>
+      
+        <content type="html"><![CDATA[<p>  Spring Web MVC是基于Servlet API构建的原始Web框架，从一开始就包含在Spring框架中。正式名称“Spring Web MVC”来自其源模块（spring-webmvc）的名称，但它通常称为“Spring MVC”。<br>  <a id="more"></a><br>      与Spring Web MVC并行，Spring Framework 5.0引入了一个反应式堆栈Web框架，其名称“Spring WebFlux”也基于其源模块（spring-webflux）。</p><p>DispatcherServlet<br>      和许多其他web框架一样，Spring MVC是围绕前controller 模式设计的，其中一个重要的Servlet   为 DispatcherServlet，请求处理提供了一个共享算法，而实际工作则由可配置的委托组件执行。该模型灵活，支持多种工作流。<br>    DispatcherServlet作为Servlet，都需要使用Java配置或web.xml根据Servlet规范声明和映射。反过来DispatcherServlet使用Spring配置来发现请求映射、view解析、异常处理等所需的委托组件。<br>     以下Java配置示例注册并初始化DispatcherServlet，它由Servlet容器自动检测：<br>public class MyWebApplicationInitializer implements WebApplicationInitializer {</p><pre><code>@Overridepublic void onStartup(ServletContext servletCxt) {    // 加载Spring web应用程序配置    AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();    ac.register(AppConfig.class);    ac.refresh();    // 创建并注册DispatcherServlet    DispatcherServlet servlet = new DispatcherServlet(ac);    ServletRegistration.Dynamic registration = servletCxt.addServlet(&quot;app&quot;, servlet);    registration.setLoadOnStartup(1);    registration.addMapping(&quot;/app/*&quot;);}</code></pre><p>}<br>以下web.xml配置示例注册并初始化DispatcherServlet：<br><web-app></web-app></p><pre><code>&lt;listener&gt;    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;&lt;/listener&gt;&lt;context-param&gt;    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;    &lt;param-value&gt;/WEB-INF/app-context.xml&lt;/param-value&gt;&lt;/context-param&gt;&lt;servlet&gt;    &lt;servlet-name&gt;app&lt;/servlet-name&gt;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;    &lt;init-param&gt;        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;        &lt;param-value&gt;&lt;/param-value&gt;    &lt;/init-param&gt;    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&lt;/servlet&gt;&lt;servlet-mapping&gt;    &lt;servlet-name&gt;app&lt;/servlet-name&gt;    &lt;url-pattern&gt;/app/*&lt;/url-pattern&gt;&lt;/servlet-mapping&gt;</code></pre>    Spring Boot遵循不同的初始化顺序。Spring Boot没有连接到Servlet容器的生命周期中，而是使用Spring配置来引导自身和嵌入式Servlet容器。在Spring配置中检测到过滤器和Servlet声明，并将其注册到Servlet容器中。<p>Context结构<br>    DispatcherServlet需要WebApplicationContext（纯粹ApplicationContext的扩展）作为自己的配置。WebApplicationContext具有一个到ServletContext和Servlet的关联链接。它还绑定到ServletContext，这样应用程序可以在RequestContextUtils上使用静态方法，以便在需要访问WebApplicationContext时查找它。<br>     对于许多应用程序来说，拥有一个WebApplicationContext是简单和足够的。也可以有一个上下文层次结构，其中一个root WebApplicationContext在多个DispatcherServlet（或其他Servlet）实例中共享，每个实例都有自己的子WebApplicationContext配置。<br>     root WebApplicationContext通常包含基础设施bean，例如需要跨多个Servlet实例共享的数据存储库和业务服务。这些bean是有效继承的，可以在特定于Servlet的子WebApplicationContext中重写（即重新声明），该子WebApplicationContext通常包含给定Servlet的本地bean。下图显示了这种关系：</p><p>以下示例配置WebApplicationContext 层级结构：<br>public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {</p><pre><code>@Overrideprotected Class&lt;?&gt;[] getRootConfigClasses() {    return new Class&lt;?&gt;[] { RootConfig.class };}@Overrideprotected Class&lt;?&gt;[] getServletConfigClasses() {    return new Class&lt;?&gt;[] { App1Config.class };}@Overrideprotected String[] getServletMappings() {    return new String[] { &quot;/app1/*&quot; };}</code></pre><p>}<br>如果不需要应用程序上下文层次结构，则应用程序可以通过getRootConfigClasses()返回所有配置，并通过getServletConfigClasses()返回null。<br>下面的示例显示了web.xml的等效项：<br><web-app></web-app></p><pre><code>&lt;listener&gt;    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;&lt;/listener&gt;&lt;context-param&gt;    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;    &lt;param-value&gt;/WEB-INF/root-context.xml&lt;/param-value&gt;&lt;/context-param&gt;&lt;servlet&gt;    &lt;servlet-name&gt;app1&lt;/servlet-name&gt;    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;    &lt;init-param&gt;        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;        &lt;param-value&gt;/WEB-INF/app1-context.xml&lt;/param-value&gt;    &lt;/init-param&gt;    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;&lt;/servlet&gt;&lt;servlet-mapping&gt;    &lt;servlet-name&gt;app1&lt;/servlet-name&gt;    &lt;url-pattern&gt;/app1/*&lt;/url-pattern&gt;&lt;/servlet-mapping&gt;</code></pre>如果不需要应用程序上下文层次结构，则应用程序可以仅配置“root”上下文，并将contextConfigLocation Servlet参数保留为空。<p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>]]></content>
+      
+      
       <categories>
-        <category>git</category>
+          
+          <category> java </category>
+          
       </categories>
-      <tags>
-        <tag>git</tag>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>java代码书写规范</title>
-    <url>/2020/04/06/hexo-frist/</url>
-    <content><![CDATA[<h2 id="Java编码规范整理汇总"><a href="#Java编码规范整理汇总" class="headerlink" title="Java编码规范整理汇总"></a>Java编码规范整理汇总</h2><p>在Java的入门过程中，我们首先要养成一个良好的编写代码习惯。那么，了解清楚Java的编码规范就显得尤为必要了。编码格式不仅仅是美不美观的问题。这里我们可以试想一下，如果在Java开发中编码不规范，容易出现bug不说，而且后续还难以维护。因此，遵守编码规范可以让代码的风格好像是一个人写出来的，即使是有很多人参与这个开发项目。</p>
-<a id="more"></a>
-<p>1、源文件基础</p>
-<p>源文件以其最顶层的类名来命名，大小写敏感，文件扩展名为 .java。源文件编码格式为UTF-8。除了行结束符序列，ASCII水平空格字符(0x20，即空格)是源文件中唯一允许出现的空白字符，这意味着所有其它字符串中的空白字符都要进行转义；制表符不用于缩进。对于具有特殊转义序列的任何字符(\b, \t, \n, \f, \r, “, ‘及)，我们使用它的转义序列，而不是相应的八进制(比如 \012)或Unicode(比如 \u000a)转义。对于剩余的非ASCII字符，是使用实际的Unicode字符(比如∞)，还是使用等价的Unicode转义符(比如\u221e)，取决于哪个能让代码更易于阅读和理解。</p>
-<p>2、源文件结构</p>
-<p>一个源文件包含(按顺序地)：许可证或版权信息；package语句；import语句；一个顶级类。以上每个部分之间用一个空行隔开。如果一个文件包含许可证或版权信息，那么它应当被放在文件最前面。package语句不换行，列限制(4.4节)并不适用于package语句。import不要使用通配符，不要换行。</p>
-<p>3、格式</p>
-<p>大括号与 if,else,for,do,while语句一起使用，即使只有一条语句(或是空)，也应该把大括号写上。对于非空块和块状结构，大括号遵循Kernighan和Ritchie风格，左大括号前不换行；左大括号后换行；右大括号前换行；如果右大括号是一个语句、函数体或类的终止，则右大括号后换行; 否则不换行。例如，如果右大括号后面是else或逗号，则不换行。一个空的块状结构里什么也不包含，大括号可以简洁地写成 {}，不需要换行。例外：如果它是一个多块语句的一部分(if/else 或 try/catch/finally) ，即使大括号内没内容，右大括号也要换行。每当开始一个新的块，缩进增加2个空格，当块结束时，缩进返回先前的缩进级别。缩进级别适用于代码和注释。</p>
-<p>4、空白</p>
-<p>以下情况需要使用一个空行：类内连续的成员之间：字段，构造函数，方法，嵌套类，静态初始化块，实例初始化块；在函数体内，语句的逻辑分组间使用空行；类内的第一个成员前或最后一个成员后的空行是可选；要满足本文档中其他节的空行要求。除了语言需求和其它规则，并且除了文字，注释和Javadoc用到单个空格，单个ASCII空格也出现在以下几个地方：分隔任何保留字与紧随其后的左括号( ()(如 if,forcatch等)；分隔任何保留字与其前面的右大括号( })(如 else,catch)等等。</p>
-<p>5、命名约定</p>
-<p>对所有标识符都通用的规则，标识符只能使用ASCII字母和数字，因此每个有效的标识符名称都能匹配正则表达式 \w+。类名都以 UpperCamelCase风格编写，方法名都以 lowerCamelCase风格编写；常量名命名模式为 CONSTANT_CASE，全部字母大写，用下划线分隔单词；非常量字段名以 lowerCamelCase风格编写；参数名以 lowerCamelCase风格编写；比起其它类型的名称，局部变量名可以有更为宽松的缩写。、</p>
-<p>6、编程实践</p>
-<p>只要是合法的，就把 @override注解给用上。使用类名调用静态的类成员，而不是具体某个对象或表达式。极少会去重写 Object.finalize。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动态SQL一些总结</title>
+      <link href="/2020/04/27/%E5%8A%A8%E6%80%81SQL%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/"/>
+      <url>/2020/04/27/%E5%8A%A8%E6%80%81SQL%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<p>MyBatis 的强大特性之一便是它的动态 SQL。如果你有使用 JDBC 或其它类似框架的经验，你就能体会到根据不同条件拼接 SQL 语句的痛苦。例如拼接时要确保不能忘记添加必要的空格，还要注意去掉列表最后一个列名的逗号。利用动态 SQL 这一特性可以彻底摆脱这种痛苦。</p><a id="more"></a><p>（1）接口中的方法<br>    public List<Emp> getEmps(Emp emp);</Emp></p><pre><code>public void updateEmp(Emp emp);public List&lt;Emp&gt; getEmpsByIds(@Param(&quot;ids&quot;) List&lt;Integer&gt; ids);public void addEmps(@Param(&quot;emp&quot;) List&lt;Emp&gt; emp);</code></pre><p>（2）Mapper文件</p><p>if标签 + where标签</p> <resultMap type="com.eu.bean.Emp" id="emp">          <id column="id" property="id">          <result column="last_name" property="lastName">          <result column="gender" property="geder">          <result column="email" property="email">      </result></result></result></id></resultMap><pre><code>&lt;select id=&quot;getEmps&quot; resultMap=&quot;emp&quot;&gt;    SELECT *FROM emp    &lt;where&gt;        &lt;if test=&quot;id != null&quot;&gt;            id = #{id}        &lt;/if&gt;        &lt;if test=&quot;lastName != null&quot;&gt;            and last_name = #{lastName}        &lt;/if&gt;        &lt;if test=&quot;geder != null&quot;&gt;             and gender = #{geder}        &lt;/if&gt;    &lt;/where&gt;&lt;/select&gt;</code></pre><p>choose，when 有一个when标签成立 ，其余的when标签中的内容不再执行。</p> <select id="getEmps" resultmap="emp">        SELECT *FROM emp        <where>            <choose>                <when test="id != null">                    id = #{id}                </when>                <when test="lastName != null">                    and last_name = #{lastName}                </when>                <when test="geder != null">                    and gender = #{geder}                </when>                <otherwise>                    id=1                </otherwise>            </choose>        </where>    </select>set标签 <update id="updateEmp">        UPDATE emp        <set>            <if test="lastName != null">                last_name=#{lastName},            </if>            <if test="geder != null">                gender = #{geder}            </if>        </set>         WHERE id=#{id}    </update><p>foreach标签<br> <!-- SELECT *FROM emp         WHERE id IN (1,5,6) --><br>      <select id="getEmpsByIds" resultmap="emp"><br>              SELECT *FROM emp<br>              WHERE id IN<br>              <foreach collection="ids" item="item_id" separator="," open="(" close=")"><br>                   #{item_id}<br>              </foreach><br>      </select></p><p>foreach标签 批量插入<br> <insert id="addEmps"><br>              INSERT INTO emp(last_name,gender,email)<br>            VALUES<br>            <foreach collection="emp" item="emps" separator=","><br>                (#{emps.lastName},#{emps.geder},#{emps.email})<br>            </foreach><br>      </insert></p><p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>]]></content>
+      
+      
       <categories>
-        <category>Java</category>
+          
+          <category> java </category>
+          
       </categories>
-      <tags>
-        <tag>java</tag>
-        <tag>web</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>unity游戏开发术语</title>
-    <url>/2020/04/07/unity/</url>
-    <content><![CDATA[<p>16毫秒 / 帧速率<br>Frame Rate。</p>
-<p>电子游戏使用的光栅显示器是普通电视时，图像一般每秒更新60次。图像更新的时间叫做帧，1秒60次即1次16毫秒（0.0167秒 = 16.7毫秒）。</p>
-<p>16毫秒是玩家可以识别的游戏画面改变的最短时间间隔。</p>
-<a id="more"></a>
-
-<p>ARPG<br>Action Role Playing Game。</p>
-<p>角色扮演类游戏中动作性较强的实时游戏，也指包含冒险游戏特征的游戏。</p>
-<p>bot<br>外挂。模拟游戏玩家自动访问游戏服务器、高效率地进行游戏、积累分数以及进行恶意的经济欺诈的程序。</p>
-<p>测试外挂是指开发者准备的用来自动化测试的客户端程序。</p>
-<p>CPU周期<br>CPU Cycle。</p>
-<p>CPU处理操作的最小单位。1GHz的CPU一秒有10亿个CPU周期，以执行的命令数而言，1秒可以执行10亿次。</p>
-<p>根据命令类型的不同，执行需要的CPU周期少则不到1个周期，多则有几百个。</p>
-<p>FPS<br>First-Person Shooter。</p>
-<p>第一人称射击游戏。</p>
-<p>I / O<br>Input / Output。</p>
-<p>输入 / 输出。包括网络 I / O、磁盘 I / O等。服务器程序的I / O基本都是网络I / O。</p>
-<p>MMO<br>Massively Multiplayer Online。</p>
-<p>大型多人网络游戏。也叫MMOG。</p>
-<p>MO<br>多人网络游戏。也叫MOG。</p>
-<p>RPC<br>Remote Procedure Call。</p>
-<p>远程过程调用，是指调用其他计算机的处理。</p>
-<p>例如，当客户端需要命令服务器做某个处理然后得到返回结果时会使用该技术。</p>
-<p>RPG<br>Role Playing Game。</p>
-<p>角色扮演游戏，根据游戏背景设定，由玩家扮演特定角色的游戏。</p>
-<p>TCP<br>Transport Control Protocol。</p>
-<p>传输控制协议，支撑整个互联网的可靠数据通信协议。可以根据需要续传IP的数据包，确保大的数据可以正常传输。但是，在连接速度较慢时，为了提高传输效率需要占用大量的内存。</p>
-<p>并行<br>Parallel。</p>
-<p>包括物理上的多个处理同时进行，以及时间上的并发（Concurrent）处理。就像CPU中的命令和任务之间的区别。通过并行处理提高速度比较困难，所以基本方针是充分考虑处理器计算能力，通过在策划层次进行讨论，或者在算法上下功夫减少计算量。</p>
-<p>部署<br>Deploy。</p>
-<p>是指部署应用程序。服务器部署是指将最新版服务器程序安装到各个服务器上来更新版本的相关操作。</p>
-<p>持久性<br>Persistent。</p>
-<p>在数据库中，持久性是指需要持久化的时间长度，包括游戏玩法中必要的时间和游戏进行所需的时间。竞速游戏的数据一般只需要保持几分钟，之后就可以丢弃，所以持久性较低，需要保存的数据量也比较小，但是MMORPG等不断进行的游戏需要较高持久性，数据量也比较大。根据持久性需求的不同，数据应该以什么形式、用什么物理介质来保存也会有所区别。</p>
-<p>带宽<br>Bandwidth。</p>
-<p>是指网络传输数据的传输速率。也叫带宽幅度。</p>
-<p>多进程编程<br>Multi-Process Programming。</p>
-<p>灵活使用多个进程的编程方式。同时运行多个进程可以有效利用多核CPU的处理能力。</p>
-<p>辅助系统<br>Additonal System。</p>
-<p>相对于游戏主体内容以外的辅助功能系统，例如玩家匹配、玩家成绩管理（积分管理）、排名以及通信功能等。</p>
-<p>多数情况下可以使用第三方的程序或者服务。</p>
-<p>负荷<br>Load。</p>
-<p>是指CPU或者网络等承载的工作量。例如，处理复杂计算时CPU的负荷比较高。发送和接收大量数据时网络的负荷较高。许多场合都可以使用，例如CPU负荷、I/O负荷以及服务器负荷等。</p>
-<p>负载均衡<br>Load Balancing。</p>
-<p>是指分散负荷。例如将一台数据库承担的负荷分散到多台数据库。</p>
-<p>共享内存<br>Shared Memory。</p>
-<p>是指在多个进程间共享内存数据。例如共享运动物体的坐标、种类以及运动方向等信息。</p>
-<p>缓存<br>Cache。</p>
-<p>为了高速读取数据而把数据暂时放在特殊区域。</p>
-<p>例如，磁盘访问比较慢时，可以把文件内容放在（缓存在）内存中，这样就可以高速读取数据。</p>
-<p>该机制被广泛应用在CPU缓存、缓存内存、浏览器缓存以及缓存服务器等地方。</p>
-<p>进程<br>Process。</p>
-<p>进程是指操作系统运行的程序的实体，和其他程序相分离，独立运行。进程与进程之间可以访问的资源（内存、Socket等）也是分离的。</p>
-<p>进程间通信<br>Inter-Process Communication。</p>
-<p>在多个进程间通信。是指多个进程间传送数据或共享数据的技术。</p>
-<p>竞态条件<br>Race Condition。</p>
-<p>是指同一个资源（内存地址等）被两个以上的使用者访问时发生的程序状态。会引起死锁（Dead Lock，互相等待对方处理结果的情况）等问题。</p>
-<p>扩展性<br>Scalable。</p>
-<p>是指可以扩展系统性能。</p>
-<p>在网络游戏中需要应对用户的增长和饱和，所以希望性能和功能可以轻松扩展。</p>
-<p>浏览器<br>Browser。</p>
-<p>浏览软件。网络游戏中的游戏浏览器范围较广，泛指将服务器网站管理的游戏进度信息展示给玩家的软件。</p>
-<p>例如使用C++语言开发的面向3D游戏的专用程序，或者Flash游戏使用的Google Chrome等Web浏览器。和一般浏览Web服务器数据的Web浏览器有所区别。</p>
-<p>轮询<br>Polling。</p>
-<p>定期询问数据是否送达或者是否接收到的机制。太过频繁的轮询会无端增加CPU的负荷。</p>
-<p>瓶颈<br>Bottleneck。</p>
-<p>系统中性能最弱的部分。系统的其他部分即使再快，如果有一个地方（瓶颈）处理比较慢，就会影响整体的性能。</p>
-<p>冗余<br>Redumdancy。</p>
-<p>作为预备而重复配置。</p>
-<p>游戏数据的冗余是指将数据在不同地方重复保存（主数据和备份数据的关系）。</p>
-<p>事件驱动<br>Event Driven。</p>
-<p>在事件发生时进行处理的编程方式。事件的类型包括接收到数据、鼠标移动等。事件驱动的编程方式常用在网络开发和游戏开发中。</p>
-<p>数据包<br>Packet。</p>
-<p>数据的传输单位。数据包通信是指将数据分割并添加控制信息后发送、接收后再合并的通信方式。TCP协议的数据通信单位是数据段（Segment），UDP/IP协议为数据报（Datagram）。网络游戏开发会经常面临数据包延迟的挑战。</p>
-<p>数据中心<br>Data Center。</p>
-<p>安置提供服务的服务器设施。配备了维持服务器所必需的电源、空调和防灾设施。</p>
-<p>套接字 API<br>Socket API。</p>
-<p>处理网络文件描述符中的套接字 API。个别的函数/系统调用（socket、connect、accept）。</p>
-<p>同时连接数<br>可以同时连接服务的用户数。</p>
-<p>图元<br>Sprite。</p>
-<p>是指电子游戏中使用的可以告诉显示的小图像。事先准备好玩家角色移动等状态的小图片，可以通过指定图像位置，在画面的任意位置显示角色。</p>
-<p>吞吐量<br>Throughput</p>
-<p>系统在一定时间内处理的数量。</p>
-<p>网络拓扑<br>网络中所含的各个计算机以什么结构相连接。计算机是节点，连接叫做边界。包括星状结构、总线结构和网状结构等，可以帮助分析和设计网络结构。</p>
-<p>文件描述符<br>在Unix系的操作系统中，除了文件以外，网络、块设备等操作系统管理的输入输出资源也采用了文件形式。</p>
-<p>线程<br>Thread。</p>
-<p>比进程更细分的程序执行单位。</p>
-<p>延迟<br>处理所需要的时间。</p>
-<p>游戏客户端<br>Game Client。</p>
-<p>指玩家的PC或者游戏机等机器上安装的，启动后可以显示游戏画面、接受用户输入输出的软件。</p>
-<p>游戏逻辑<br>Game Logic</p>
-<p>指连接游戏进度信息和用户界面信息的算法。</p>
-<p>云（Cloud）<br>在云计算中主要是指服务器端的计算机群。</p>
-<p>在单纯的主机托管中，包括存储、负载均衡、付费系统、日志解析等服务器架构中的计算机资源可以根据需要即时调整。</p>
-<p>在内存中<br>把数据放在内存中，可以在几个CPU时钟周期（几纳秒到几百纳秒之间）获取到数据的状态。</p>
-<p>中间件<br>Middleware</p>
-<p>将应用程序普遍使用的功能进行集成的专业化软件。</p>
-<p>纵向扩展 / 横向扩展<br>纵向扩展是指增加内存、升级CPU等，通过提升单台服务器的性能来改善系统性能的方法。</p>
-<p>横向扩展是指通过增加服务器台数来提供系统性能的方法。</p>
-<p>阻塞/非阻塞<br>阻塞是指处理完成之前持续等待。</p>
-<p>例如，收到数据前持续等待的程序（阻塞程序），在等待期间不能进行其他处理。</p>
-<p>采用非阻塞（不持续等待）处理可以解决这个问题。也可以叫做同步调用和非同步调用。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> SQL </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>IDEA中Git的更新、提交与还原方法</title>
+      <link href="/2020/04/27/IDEA%E4%B8%ADGit%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81%E6%8F%90%E4%BA%A4%E4%B8%8E%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/"/>
+      <url>/2020/04/27/IDEA%E4%B8%ADGit%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81%E6%8F%90%E4%BA%A4%E4%B8%8E%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）</p><a id="more"></a><p>；如图1：选择pull进行更新代码操作；<br><img src="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p><p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；<br><img src="https://img-blog.csdn.net/20171120192417714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第三步：1.当确定第二步操作完之后，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://img-blog.csdn.net/20171120192659004?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193357463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>3.进行commit Directory操作 如图7：<br><img src="https://img-blog.csdn.net/20171120193846925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://img-blog.csdn.net/20171120194127109?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://img-blog.csdn.net/20171120195312180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://img-blog.csdn.net/20171120195941337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p><p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>]]></content>
+      
+      
       <categories>
-        <category>unity</category>
+          
+          <category> git </category>
+          
       </categories>
-      <tags>
-        <tag>unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>了解C#(一)</title>
-    <url>/2020/04/07/c/</url>
-    <content><![CDATA[<p>创建控制台应用程序，依次选择“文件”一“新建”一“项目”命令，弹出如下图所示的对话框。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314105503344.png" alt></p>
-<a id="more"></a>
-<p>在其中选择“控制台应用程序”选项，并为该项目设置名称、位置以及解决方案名称，单击“确定”按钮即可创建控制台应用程序，效果如下图所示。<br>需要注意解决方案名称不一定与项目名称相同，在同一个解决方案中允许设置多个项目.<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314110349604.png" alt><br>从上图所示的界面中可以看出在解决方案资源管理器中创建了一个名为 Solution 的解决方案，并在该解决方案中创建了一个名为 Test 的控制台应用程序。</p>
-<p>在 Test 应用程序中包含了一个名为 Program.cs的类文件，该文件中的代码如下图所示。</p>
-<p>在该代码中的第 11 行到第 13 行是 Main 方法，Main 方法是一个特殊的方法，并且在每个类中只能有一个，只需要将代码写到 Main 方法中，在项目运行后 Main 方法中的代码就会执行。</p>
-<p>在控制台应用 程序的控制台界面中输出内容的方法如下。<br>Console.Write();  //向控制台界面不换行输出内容<br>Console.WriteLine(); //向控制台界面换行输出内容<br>下面使用控制台应用程序向控制台输出“第一个 C# 程序”和“这是一个控制台应用程序”，实现的代码如下。<br>namespace test<br>{<br>    class Program<br>    {<br>        static void Main(string[] args)<br>        {<br>            Console.WriteLine(“第一个 C# 程序”);<br>            Console.WriteLine(“这是第一个控制台程序”);<br>        }<br>    }<br>}<br>按 Ctrl+F5 组合键运行程序，效果如下图所示。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314111351418.png" alt><br>关于使用 Console.Write() 方法来完成输出信息的操作请自行尝试并查看运行的效果。</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+            <tag> java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>国家机密</title>
+      <link href="/2020/04/11/hexo%E6%90%AD%E5%BB%BA/%E5%9B%BD%E5%AE%B6%E6%9C%BA%E5%AF%86/"/>
+      <url>/2020/04/11/hexo%E6%90%AD%E5%BB%BA/%E5%9B%BD%E5%AE%B6%E6%9C%BA%E5%AF%86/</url>
+      
+        <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="65844bd6690d613849436f2e6a600ea51493874dd9db9d22801de34f4483f888">c3ed04568bc4074eb39f77cf92402be48bfa777a38fc9717d5d322bd35c6b593450fc8c9440ec89a6f0079bd992edbc613ab6f7b46916715cfcaabc174c66fdc1e0a2d7b10e5ccca15fcedc5c289e69d9dfbcdb6af91bebdc604a4746757bb6afbdebff49f365d58b1eee040dafdb2ccee9221ee7c52bbb15b7b8c97ec9d0a4c7529bc9ace376c2e853357b37cae2236e9cbdea972f3f043e97bac6505f9327d5e7fc505fd6b545c31c4b98e0ad6e978d062d3108e7ad657ebd0043ec1a2eb69b89ecc3902e2da6e16d7a22940d300e8d7e6bfbf7e6798aba350f9727c2dae079aaa9069583b26cfa46bc93daf5aac13eaedeb44c928f78b0100def18f63e356ab7599d61312e443c6c2acb00e03f0a4e9fdfc4cc86d6a1e308cd4c06adee6085862f27da69499f8acf38bc6c091ea8672160bec89fe25b7c22ae99a21ad7b348879922e41577c7ba5d216bbbf376d96e7ac28114c879bf25b11ebf702d6315ebf24837dfe0983258f182347de92633553434df8ab100a13e9800a6d75a1401b53ccd9863a23ce3e9801b54455b4a7bfb63ef4714fdff1ca33239a4fa0d9a49b98ffd73d84384bcdd78f50ad2030ca38e37afba07c4a4223ba69fd634441f9c91908ec0c81d8fca87c249402355df7c739a347813bb5e11265c9bbb51b256ef8fe53b05e0de96cd7a8b8402a879b408efe46c08b3b023126bc236c917e0dce0bedca4ee1fa352c3e0f55a5e64e9b3029985e55f001ac651802ac975ea10bf296b73703cdd71d042a5de684a6870e9bf3d050411546bd4b481ecbfd8466bd29561976434c2530d6b6485392cea1d093d16bccde39d987f51e2664bc00be083751f80371c2d37db974bad7f9798a0797c47d5104eb4cf44f16d5cfa33ef3dee2e2a8ec1ad918eaf810b22f29603f5761cc72b091a9ab0caa55d16d2019a7ec42b3243c2f61b4771b15c33f95827b32a2d4dacc1735659676389aae7a99aa6d1d2a76d45508d05e2c1b0935a59d8a51280b74b6b49ee031b0ce165ff6ffb8821425f7770d7bbfd17ae0900b322679b3b4840267bcff7e8a4c4fe98c24765671c79e2c8377604dd4cc305c1b2f2347a66516879d84127ece7d625d50bee51241f5f8242b815d37828ed202edcf8513612b4be1a9ce21d43d5db9584decb533a2ea0db340eacf5dfa182538413c73560dbd1a306326a22b22142c470090f5c7dac3bc0f2d64d0a7d80a8c5678d8f1eb6b88cdc9a44f2f708436647457901d783c89bbbe5834afb61ed2f381f6f70d1599be94d4b536337b404ebdd7963e1615f1d8cd3c7b8de8e800ad83e1ff8f8f90bc72751308e60c2bd12391a6f93467725ecf44e841e1d47294c2963106c7383311521f9c06b8b2c198a7ccd0c1986fcca6724784c62c7e5794c219f895844355dc3f1b188ba9ed905405062d6d6f10cb9769ad2d283cb4a98fb9bcd2c9cf0f3add3bba5dee19c3d8293ac65b0cfdaa5003f1042043155be297e70f3f45ef4d0670eba8117ac1efe2eaf8e95a5c5bf24795194fc9edefffac56ca32342d4c2a6f64bac741915d2ef8ed62ed3a13f90ae1fc3bce1008a6d23df3933fa7bb5f291196f1d39ecb96c69a259c76b47a95e567e44b9f0b33e78e4712cd8ca3b49150f278530d84adc3ba4700006a1662bd4cd7bc5bf0543bcdfd9d55a7510f071ea7f2cfc003fdb7301f9868a6d0a172d1117b642b5a80da909b50101322a650890ad8515d7b63bb50c2df3916c4731b4be2cb3ccebac54e7a61c7a9563d6f73276c219c22c2e07f40e56fb20764267bdc31e4770091d2c42fbf8a1d4427357f78999262b67a80a692f8eb448b69ebed09d7a58ae931ea2a812ccb781d927eab9ca64cfc0bb48d44f056950a62c5cd35d2846378a571da488e7a3e482ed334f8c9008f133cfd64d113284457f63c4f2283c68e6d7ecf148a89a1048d95e398af72648560ccdc37dc4ad496bdbd1eded754728ee3886f8090d7c62484f9f50364bb1e46498707a7e433ddbd599fd6bcc83dddf2967735861ac265191858b4a96dabd4f6f0d2773a658a3ce9478e6b99028816cb44f31760d08b4ed084bbc47fd7f1dbd04d0c0eb3a4cf633c114362f440690b1de547d85dad2c3c58dc6bc28b4a3a47246418e51e60f862cdd31d404382b17ec7829a7ae787ea97cc1feff2bd89ac906286ca3982b0cd455bb1d1342465b6983a397f25b13a4707cdca5b78ab36a079907fa6dfdd00804163b88d510263e8bc7e3351ba2dd638d6c5d83e83324af2cf949e390d66249969b83c29ce8eea7fac8fd31a7cb84d8e5e3ba3a7ef3ac257cd6d41eb8329cb75cad4bdb55c8b2bc681916f3275875bd1ac0d7ff5a1ffe2e46824aa568ad0569d4c97533ae8099adf7eefbd86134e4a245332866e872d1179db236282ca23154562861c202cd9631b492dea065f565f7177da9babfddf229fb57f85a8bad319be90dee08a5e74e6412515b6ac741d9261af9fc7b12a0dbdc56fe5c5c9a956a1e5c7f7b635055c284bb2749be2fea36168fbb51a48d51e09609654351e6a7c09c4035b1ca3354209cbccc1775c25339ecdc9dd87db935c21b6e526a94b1d20a3a3878bfaf5e8d325be2f052659eff31adaccfdb03d2aa014609f7f91e4942804060b22da44e4f4f76fb3a2a6ab73e203b04b5004816b1aeb0f8e1b2d6d5c96dbf9691b9c57d4241f7ae6bf33f8b50022778504fa1d23d8738b9e4c62e039dafb7a2a6497b82ec055f029744646a349d9ad33fb829867543c2de958a5aea2bf1203bd746c5c3bf2079ddf2621055be04b0b3dd16b63ce3279224930d1910c7fc3d0966d1f9ad9df929b37b8bda480050a393bca19cb60b16406a4d1286f84fe9bf8463dab92ddb0ca346cddb05526c408df9470716ef04eef914ee33e85338cf4401f5d8573f51ea85e9c3cf3025bc87b382d1ec76587610cc111528590110d405a7f01bde251d3dce809ad91f8979a5e0713af58b37ad9a98d72a5fbfef88ede79ea2fb4692c28253782134bd88da0d3537ff87502576de99f98fa819c4ce0266a034447a5751413fa337ef7d9f5456d55390b507bd952b159d77f1b4341e0c7fddbc1fcb01e9fd9a59c68541c0b3303de54724c7ab6f0b16bf8d1391e691d19c262747b1d0907da786345d1145a8d02686a6cab38055a56f07cfaac06a1639fa9be79d55d7118a6e7729af924abaf228cadd7643b3c236da5ec94182754382c0b99721e3194b03070ad3acd8c86c827f7598e50d435e7a057228332408e137400bf24ef0743a08a175422f9b582c46c47224f7fdb93f9db19c0f442ae29a5779cb71f4707a4e2c74a16c4542eb8a36054f4d6f0730bd6479fd84d1945e74a935d7d999cba82b98a1b12deec7d7c2a2288da714b2119843d3af6ec0f21598d177cafd4cf7692d9ee699bc8c60f1ca848369fd678e28e858f13c04136c8f2c01cefe5fc4e1cd57f70275a492c311e5d86098b8b848cef2af40d6780d3eff06e7718740ec362d90b8ce0571e2ee543ec328a39e578841184278dd410d24a38aebff1cbd81be5a9975ea27b3c371cacfecf91f17b80777d136c538a643de4b285e3ed086823f169c4128f3f7b278aed4a90d5104483fa057d31b5834d32c8a1d068befa5bdc21b47dd4e757854cc73f634b38a8c919e2888fae310458117dd761db94b45a795bdfe3fe2d15b8fbbd6074270dca335cf2a682cc3789953d3f601a07bdb7a2ce57345b39f068d756fbcbb655dbf77febbd967f7bf9f2ec90ec0670f06f24faff4fd755ee2980d60d011d46fb6aa7c7fec78b7d80d948d35725d4ffdd9db045a0c502265b47124a85af2c38fde73aad7df24094f05157497fcd363aa73629df208e32c4a6a8957cb7bb994cad49794aea30f9bf33535f0978d1f478e0be107462343f9c120842589770bb8c4b4a3a2c6b29ee960829ff32e4f8a2224b52264946b32f5c302b737c16d7dcee5cc103f9797b2e1dba6ad2dade40163893bbce15397ecf1b9cd04c038d33cc6e43da17a719321feb67a7644ab97a6128888af23b845c274c4efc5bb8bd837752b8fed4670447e7754afb133d73556d67703badaee5012af4cad857575eead5e96d1dd1b743382e904f519f52469c70c2f185551e388344ff657158b00270c4ff3630b879c4065cd9dc7213e8f1fc3f6384cf1fd546a348c73238dec7144a78f6ebd18dcf97a232d125757166e382af1e25e11eec5f640d9825890c12f6b383c82438ef28c6c5f2a8c6531ea37cfa0c2d35520956cb36267db83ba58619dcf8fd3ba76dfe730e51c3e78c691ab061cfc80b1d6a80c4ad30ee5bd8ada89e42b4a8819ac5b3eb2d3a4149842c59fcd0fcdc230a02ad56f4c8308813b7ea51386ea904a1551b4ce973dafd87936225fb36300ad31e7b7ef998adf47caf74e50e6b7fe2aae3e4de43705f59846632f8c0a5490b0e8dd2bb09153c53d5be67bc34a4215476a83fd33b1246612d4578323d478856e7cbb2bfec41951a683abbc83168d7e11b7d1e5a91bd6e61bfc7c756ec4f0ff8ce33743ee1c3eaf260feef1c939e4f7390a086d976bbffeba070e5fada694a21bee152361ae5b303f87de7e2e79d569a9bb849ff3516cd0ac1631c102e846ebd7de1db0af4ab3e8db7cc19aa48ba1b7ad54c15a5d6785efcf0b558d62a1a78f471e9d797ae3c0ac053d100faa82843032068905eb334ff538e3595476989c82787efe5cf407d00315842dadb6b47a15e19f5afe2f9260ddf6df4444c626461820d1459dfb742241718f8b18d1077b2a8fd9b3fa9f5a428d11b60606246a54f9bb54a9cc3e3d28b36b524b7a817f316a05c34678b2814618cf047007eba80f0b02a7c5f116845e2b4fbf2bfe79f6ceb74608c5b6ebdb8aa4c57cee84798a0fca6369ef713ad15ae5e61b0c42290bcf4eb7c1930e9b44f7f1746d5a7d836161567d7897892d6efb26783f7142e40521b1140cfce8fda40d7235b356abeb91b77a86fca529174555a16dea32f13ac3fa9635bbcf9aaf450f6fedb5d50dc981cfe04f320b1c265b1a3132640227a53341f1218df95e754d4dd128a06ca078d9d8414fb5289920f8f6d998e08902bd91b609b760f2fa3a2228ceaf9f5957fe52875ac02727a25751465e45d16986a98fc66916b02f3ce969b7aeea23b7cf94730fe25ce8967688fa1474781ba1aaec66d867e0bf4b121124e6c7d3ded5b510debb56b788816bd747c1de78902243666ed523af3d94baced67870ef9399b567ec79cc90c50f79ee7b3129a73614762db481a94a78165c4475bf5c9d7419c58b78e7a133b12eeab063923f025b7dfc679b66bac7957bc0386fe4af1e6ad723f204a2eab281154d7c9e5a4dfd28c83db69990dbc285caeb69a28a2002499d4e00a7377b08718d182aa69126b14cc0f87c4df11697b1becb5a206d3b57034c69f1143a5b7a21bbcc6aca54db2e4a7dd56eb6f</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
       <categories>
-        <category>unity</category>
+          
+          <category> 机密文件 </category>
+          
       </categories>
-      <tags>
-        <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>国家机密</title>
-    <url>/2020/04/11/hexo%E6%90%AD%E5%BB%BA/%E5%9B%BD%E5%AE%B6%E6%9C%BA%E5%AF%86/</url>
-    <content><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <div class="hbe-input-container">
-  <input type="password" id="hbePass" placeholder="" />
-    <label for="hbePass">Hey, password is required here.</label>
-    <div class="bottom-line"></div>
-  </div>
-  <script id="hbeData" type="hbeData" data-hmacdigest="65844bd6690d613849436f2e6a600ea51493874dd9db9d22801de34f4483f888">c3ed04568bc4074eb39f77cf92402be48bfa777a38fc9717d5d322bd35c6b593450fc8c9440ec89a6f0079bd992edbc613ab6f7b46916715cfcaabc174c66fdc1e0a2d7b10e5ccca15fcedc5c289e69d9dfbcdb6af91bebdc604a4746757bb6afbdebff49f365d58b1eee040dafdb2ccee9221ee7c52bbb15b7b8c97ec9d0a4c7529bc9ace376c2e853357b37cae2236e9cbdea972f3f043e97bac6505f9327d5e7fc505fd6b545c31c4b98e0ad6e978d062d3108e7ad657ebd0043ec1a2eb69b89ecc3902e2da6e16d7a22940d300e8d7e6bfbf7e6798aba350f9727c2dae079aaa9069583b26cfa46bc93daf5aac13eaedeb44c928f78b0100def18f63e356ab7599d61312e443c6c2acb00e03f0a4e9fdfc4cc86d6a1e308cd4c06adee6085862f27da69499f8acf38bc6c091ea8672160bec89fe25b7c22ae99a21ad7b348879922e41577c7ba5d216bbbf376d96e7ac28114c879bf25b11ebf702d6315ebf24837dfe0983258f182347de92633553434df8ab100a13e9800a6d75a1401b53ccd9863a23ce3e9801b54455b4a7bfb63ef4714fdff1ca33239a4fa0d9a49b98ffd73d84384bcdd78f50ad2030ca38e37afba07c4a4223ba69fd634441f9c91908ec0c81d8fca87c249402355df7c739a347813bb5e11265c9bbb51b256ef8fe53b05e0de96cd7a8b8402a879b408efe46c08b3b023126bc236c917e0dce0bedca4ee1fa352c3e0f55a5e64e9b3029985e55f001ac651802ac975ea10bf296b73703cdd71d042a5de684a6870e9bf3d050411546bd4b481ecbfd8466bd29561976434c2530d6b6485392cea1d093d16bccde39d987f51e2664bc00be083751f80371c2d37db974bad7f9798a0797c47d5104eb4cf44f16d5cfa33ef3dee2e2a8ec1ad918eaf810b22f29603f5761cc72b091a9ab0caa55d16d2019a7ec42b3243c2f61b4771b15c33f95827b32a2d4dacc1735659676389aae7a99aa6d1d2a76d45508d05e2c1b0935a59d8a51280b74b6b49ee031b0ce165ff6ffb8821425f7770d7bbfd17ae0900b322679b3b4840267bcff7e8a4c4fe98c24765671c79e2c8377604dd4cc305c1b2f2347a66516879d84127ece7d625d50bee51241f5f8242b815d37828ed202edcf8513612b4be1a9ce21d43d5db9584decb533a2ea0db340eacf5dfa182538413c73560dbd1a306326a22b22142c470090f5c7dac3bc0f2d64d0a7d80a8c5678d8f1eb6b88cdc9a44f2f708436647457901d783c89bbbe5834afb61ed2f381f6f70d1599be94d4b536337b404ebdd7963e1615f1d8cd3c7b8de8e800ad83e1ff8f8f90bc72751308e60c2bd12391a6f93467725ecf44e841e1d47294c2963106c7383311521f9c06b8b2c198a7ccd0c1986fcca6724784c62c7e5794c219f895844355dc3f1b188ba9ed905405062d6d6f10cb9769ad2d283cb4a98fb9bcd2c9cf0f3add3bba5dee19c3d8293ac65b0cfdaa5003f1042043155be297e70f3f45ef4d0670eba8117ac1efe2eaf8e95a5c5bf24795194fc9edefffac56ca32342d4c2a6f64bac741915d2ef8ed62ed3a13f90ae1fc3bce1008a6d23df3933fa7bb5f291196f1d39ecb96c69a259c76b47a95e567e44b9f0b33e78e4712cd8ca3b49150f278530d84adc3ba4700006a1662bd4cd7bc5bf0543bcdfd9d55a7510f071ea7f2cfc003fdb7301f9868a6d0a172d1117b642b5a80da909b50101322a650890ad8515d7b63bb50c2df3916c4731b4be2cb3ccebac54e7a61c7a9563d6f73276c219c22c2e07f40e56fb20764267bdc31e4770091d2c42fbf8a1d4427357f78999262b67a80a692f8eb448b69ebed09d7a58ae931ea2a812ccb781d927eab9ca64cfc0bb48d44f056950a62c5cd35d2846378a571da488e7a3e482ed334f8c9008f133cfd64d113284457f63c4f2283c68e6d7ecf148a89a1048d95e398af72648560ccdc37dc4ad496bdbd1eded754728ee3886f8090d7c62484f9f50364bb1e46498707a7e433ddbd599fd6bcc83dddf2967735861ac265191858b4a96dabd4f6f0d2773a658a3ce9478e6b99028816cb44f31760d08b4ed084bbc47fd7f1dbd04d0c0eb3a4cf633c114362f440690b1de547d85dad2c3c58dc6bc28b4a3a47246418e51e60f862cdd31d404382b17ec7829a7ae787ea97cc1feff2bd89ac906286ca3982b0cd455bb1d1342465b6983a397f25b13a4707cdca5b78ab36a079907fa6dfdd00804163b88d510263e8bc7e3351ba2dd638d6c5d83e83324af2cf949e390d66249969b83c29ce8eea7fac8fd31a7cb84d8e5e3ba3a7ef3ac257cd6d41eb8329cb75cad4bdb55c8b2bc681916f3275875bd1ac0d7ff5a1ffe2e46824aa568ad0569d4c97533ae8099adf7eefbd86134e4a245332866e872d1179db236282ca23154562861c202cd9631b492dea065f565f7177da9babfddf229fb57f85a8bad319be90dee08a5e74e6412515b6ac741d9261af9fc7b12a0dbdc56fe5c5c9a956a1e5c7f7b635055c284bb2749be2fea36168fbb51a48d51e09609654351e6a7c09c4035b1ca3354209cbccc1775c25339ecdc9dd87db935c21b6e526a94b1d20a3a3878bfaf5e8d325be2f052659eff31adaccfdb03d2aa014609f7f91e4942804060b22da44e4f4f76fb3a2a6ab73e203b04b5004816b1aeb0f8e1b2d6d5c96dbf9691b9c57d4241f7ae6bf33f8b50022778504fa1d23d8738b9e4c62e039dafb7a2a6497b82ec055f029744646a349d9ad33fb829867543c2de958a5aea2bf1203bd746c5c3bf2079ddf2621055be04b0b3dd16b63ce3279224930d1910c7fc3d0966d1f9ad9df929b37b8bda480050a393bca19cb60b16406a4d1286f84fe9bf8463dab92ddb0ca346cddb05526c408df9470716ef04eef914ee33e85338cf4401f5d8573f51ea85e9c3cf3025bc87b382d1ec76587610cc111528590110d405a7f01bde251d3dce809ad91f8979a5e0713af58b37ad9a98d72a5fbfef88ede79ea2fb4692c28253782134bd88da0d3537ff87502576de99f98fa819c4ce0266a034447a5751413fa337ef7d9f5456d55390b507bd952b159d77f1b4341e0c7fddbc1fcb01e9fd9a59c68541c0b3303de54724c7ab6f0b16bf8d1391e691d19c262747b1d0907da786345d1145a8d02686a6cab38055a56f07cfaac06a1639fa9be79d55d7118a6e7729af924abaf228cadd7643b3c236da5ec94182754382c0b99721e3194b03070ad3acd8c86c827f7598e50d435e7a057228332408e137400bf24ef0743a08a175422f9b582c46c47224f7fdb93f9db19c0f442ae29a5779cb71f4707a4e2c74a16c4542eb8a36054f4d6f0730bd6479fd84d1945e74a935d7d999cba82b98a1b12deec7d7c2a2288da714b2119843d3af6ec0f21598d177cafd4cf7692d9ee699bc8c60f1ca848369fd678e28e858f13c04136c8f2c01cefe5fc4e1cd57f70275a492c311e5d86098b8b848cef2af40d6780d3eff06e7718740ec362d90b8ce0571e2ee543ec328a39e578841184278dd410d24a38aebff1cbd81be5a9975ea27b3c371cacfecf91f17b80777d136c538a643de4b285e3ed086823f169c4128f3f7b278aed4a90d5104483fa057d31b5834d32c8a1d068befa5bdc21b47dd4e757854cc73f634b38a8c919e2888fae310458117dd761db94b45a795bdfe3fe2d15b8fbbd6074270dca335cf2a682cc3789953d3f601a07bdb7a2ce57345b39f068d756fbcbb655dbf77febbd967f7bf9f2ec90ec0670f06f24faff4fd755ee2980d60d011d46fb6aa7c7fec78b7d80d948d35725d4ffdd9db045a0c502265b47124a85af2c38fde73aad7df24094f05157497fcd363aa73629df208e32c4a6a8957cb7bb994cad49794aea30f9bf33535f0978d1f478e0be107462343f9c120842589770bb8c4b4a3a2c6b29ee960829ff32e4f8a2224b52264946b32f5c302b737c16d7dcee5cc103f9797b2e1dba6ad2dade40163893bbce15397ecf1b9cd04c038d33cc6e43da17a719321feb67a7644ab97a6128888af23b845c274c4efc5bb8bd837752b8fed4670447e7754afb133d73556d67703badaee5012af4cad857575eead5e96d1dd1b743382e904f519f52469c70c2f185551e388344ff657158b00270c4ff3630b879c4065cd9dc7213e8f1fc3f6384cf1fd546a348c73238dec7144a78f6ebd18dcf97a232d125757166e382af1e25e11eec5f640d9825890c12f6b383c82438ef28c6c5f2a8c6531ea37cfa0c2d35520956cb36267db83ba58619dcf8fd3ba76dfe730e51c3e78c691ab061cfc80b1d6a80c4ad30ee5bd8ada89e42b4a8819ac5b3eb2d3a4149842c59fcd0fcdc230a02ad56f4c8308813b7ea51386ea904a1551b4ce973dafd87936225fb36300ad31e7b7ef998adf47caf74e50e6b7fe2aae3e4de43705f59846632f8c0a5490b0e8dd2bb09153c53d5be67bc34a4215476a83fd33b1246612d4578323d478856e7cbb2bfec41951a683abbc83168d7e11b7d1e5a91bd6e61bfc7c756ec4f0ff8ce33743ee1c3eaf260feef1c939e4f7390a086d976bbffeba070e5fada694a21bee152361ae5b303f87de7e2e79d569a9bb849ff3516cd0ac1631c102e846ebd7de1db0af4ab3e8db7cc19aa48ba1b7ad54c15a5d6785efcf0b558d62a1a78f471e9d797ae3c0ac053d100faa82843032068905eb334ff538e3595476989c82787efe5cf407d00315842dadb6b47a15e19f5afe2f9260ddf6df4444c626461820d1459dfb742241718f8b18d1077b2a8fd9b3fa9f5a428d11b60606246a54f9bb54a9cc3e3d28b36b524b7a817f316a05c34678b2814618cf047007eba80f0b02a7c5f116845e2b4fbf2bfe79f6ceb74608c5b6ebdb8aa4c57cee84798a0fca6369ef713ad15ae5e61b0c42290bcf4eb7c1930e9b44f7f1746d5a7d836161567d7897892d6efb26783f7142e40521b1140cfce8fda40d7235b356abeb91b77a86fca529174555a16dea32f13ac3fa9635bbcf9aaf450f6fedb5d50dc981cfe04f320b1c265b1a3132640227a53341f1218df95e754d4dd128a06ca078d9d8414fb5289920f8f6d998e08902bd91b609b760f2fa3a2228ceaf9f5957fe52875ac02727a25751465e45d16986a98fc66916b02f3ce969b7aeea23b7cf94730fe25ce8967688fa1474781ba1aaec66d867e0bf4b121124e6c7d3ded5b510debb56b788816bd747c1de78902243666ed523af3d94baced67870ef9399b567ec79cc90c50f79ee7b3129a73614762db481a94a78165c4475bf5c9d7419c58b78e7a133b12eeab063923f025b7dfc679b66bac7957bc0386fe4af1e6ad723f204a2eab281154d7c9e5a4dfd28c83db69990dbc285caeb69a28a2002499d4e00a7377b08718d182aa69126b14cc0f87c4df11697b1becb5a206d3b57034c69f1143a5b7a21bbcc6aca54db2e4a7dd56eb6f</script>
-</div>
-<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+      
+      
+        <tags>
+            
+            <tag> 机密文件 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>了解C#(一)</title>
+      <link href="/2020/04/07/c/"/>
+      <url>/2020/04/07/c/</url>
+      
+        <content type="html"><![CDATA[<p>创建控制台应用程序，依次选择“文件”一“新建”一“项目”命令，弹出如下图所示的对话框。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314105503344.png" alt></p><a id="more"></a><p>在其中选择“控制台应用程序”选项，并为该项目设置名称、位置以及解决方案名称，单击“确定”按钮即可创建控制台应用程序，效果如下图所示。<br>需要注意解决方案名称不一定与项目名称相同，在同一个解决方案中允许设置多个项目.<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314110349604.png" alt><br>从上图所示的界面中可以看出在解决方案资源管理器中创建了一个名为 Solution 的解决方案，并在该解决方案中创建了一个名为 Test 的控制台应用程序。</p><p>在 Test 应用程序中包含了一个名为 Program.cs的类文件，该文件中的代码如下图所示。</p><p>在该代码中的第 11 行到第 13 行是 Main 方法，Main 方法是一个特殊的方法，并且在每个类中只能有一个，只需要将代码写到 Main 方法中，在项目运行后 Main 方法中的代码就会执行。</p><p>在控制台应用 程序的控制台界面中输出内容的方法如下。<br>Console.Write();  //向控制台界面不换行输出内容<br>Console.WriteLine(); //向控制台界面换行输出内容<br>下面使用控制台应用程序向控制台输出“第一个 C# 程序”和“这是一个控制台应用程序”，实现的代码如下。<br>namespace test<br>{<br>    class Program<br>    {<br>        static void Main(string[] args)<br>        {<br>            Console.WriteLine(“第一个 C# 程序”);<br>            Console.WriteLine(“这是第一个控制台程序”);<br>        }<br>    }<br>}<br>按 Ctrl+F5 组合键运行程序，效果如下图所示。<br><img src="http://c.biancheng.net/uploads/allimg/190314/4-1Z314111351418.png" alt><br>关于使用 Console.Write() 方法来完成输出信息的操作请自行尝试并查看运行的效果。</p>]]></content>
+      
+      
       <categories>
-        <category>机密文件</category>
+          
+          <category> unity </category>
+          
       </categories>
-      <tags>
-        <tag>机密文件</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> C# </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>unity游戏开发术语</title>
+      <link href="/2020/04/07/unity/"/>
+      <url>/2020/04/07/unity/</url>
+      
+        <content type="html"><![CDATA[<p>16毫秒 / 帧速率<br>Frame Rate。</p><p>电子游戏使用的光栅显示器是普通电视时，图像一般每秒更新60次。图像更新的时间叫做帧，1秒60次即1次16毫秒（0.0167秒 = 16.7毫秒）。</p><p>16毫秒是玩家可以识别的游戏画面改变的最短时间间隔。</p><a id="more"></a><p>ARPG<br>Action Role Playing Game。</p><p>角色扮演类游戏中动作性较强的实时游戏，也指包含冒险游戏特征的游戏。</p><p>bot<br>外挂。模拟游戏玩家自动访问游戏服务器、高效率地进行游戏、积累分数以及进行恶意的经济欺诈的程序。</p><p>测试外挂是指开发者准备的用来自动化测试的客户端程序。</p><p>CPU周期<br>CPU Cycle。</p><p>CPU处理操作的最小单位。1GHz的CPU一秒有10亿个CPU周期，以执行的命令数而言，1秒可以执行10亿次。</p><p>根据命令类型的不同，执行需要的CPU周期少则不到1个周期，多则有几百个。</p><p>FPS<br>First-Person Shooter。</p><p>第一人称射击游戏。</p><p>I / O<br>Input / Output。</p><p>输入 / 输出。包括网络 I / O、磁盘 I / O等。服务器程序的I / O基本都是网络I / O。</p><p>MMO<br>Massively Multiplayer Online。</p><p>大型多人网络游戏。也叫MMOG。</p><p>MO<br>多人网络游戏。也叫MOG。</p><p>RPC<br>Remote Procedure Call。</p><p>远程过程调用，是指调用其他计算机的处理。</p><p>例如，当客户端需要命令服务器做某个处理然后得到返回结果时会使用该技术。</p><p>RPG<br>Role Playing Game。</p><p>角色扮演游戏，根据游戏背景设定，由玩家扮演特定角色的游戏。</p><p>TCP<br>Transport Control Protocol。</p><p>传输控制协议，支撑整个互联网的可靠数据通信协议。可以根据需要续传IP的数据包，确保大的数据可以正常传输。但是，在连接速度较慢时，为了提高传输效率需要占用大量的内存。</p><p>并行<br>Parallel。</p><p>包括物理上的多个处理同时进行，以及时间上的并发（Concurrent）处理。就像CPU中的命令和任务之间的区别。通过并行处理提高速度比较困难，所以基本方针是充分考虑处理器计算能力，通过在策划层次进行讨论，或者在算法上下功夫减少计算量。</p><p>部署<br>Deploy。</p><p>是指部署应用程序。服务器部署是指将最新版服务器程序安装到各个服务器上来更新版本的相关操作。</p><p>持久性<br>Persistent。</p><p>在数据库中，持久性是指需要持久化的时间长度，包括游戏玩法中必要的时间和游戏进行所需的时间。竞速游戏的数据一般只需要保持几分钟，之后就可以丢弃，所以持久性较低，需要保存的数据量也比较小，但是MMORPG等不断进行的游戏需要较高持久性，数据量也比较大。根据持久性需求的不同，数据应该以什么形式、用什么物理介质来保存也会有所区别。</p><p>带宽<br>Bandwidth。</p><p>是指网络传输数据的传输速率。也叫带宽幅度。</p><p>多进程编程<br>Multi-Process Programming。</p><p>灵活使用多个进程的编程方式。同时运行多个进程可以有效利用多核CPU的处理能力。</p><p>辅助系统<br>Additonal System。</p><p>相对于游戏主体内容以外的辅助功能系统，例如玩家匹配、玩家成绩管理（积分管理）、排名以及通信功能等。</p><p>多数情况下可以使用第三方的程序或者服务。</p><p>负荷<br>Load。</p><p>是指CPU或者网络等承载的工作量。例如，处理复杂计算时CPU的负荷比较高。发送和接收大量数据时网络的负荷较高。许多场合都可以使用，例如CPU负荷、I/O负荷以及服务器负荷等。</p><p>负载均衡<br>Load Balancing。</p><p>是指分散负荷。例如将一台数据库承担的负荷分散到多台数据库。</p><p>共享内存<br>Shared Memory。</p><p>是指在多个进程间共享内存数据。例如共享运动物体的坐标、种类以及运动方向等信息。</p><p>缓存<br>Cache。</p><p>为了高速读取数据而把数据暂时放在特殊区域。</p><p>例如，磁盘访问比较慢时，可以把文件内容放在（缓存在）内存中，这样就可以高速读取数据。</p><p>该机制被广泛应用在CPU缓存、缓存内存、浏览器缓存以及缓存服务器等地方。</p><p>进程<br>Process。</p><p>进程是指操作系统运行的程序的实体，和其他程序相分离，独立运行。进程与进程之间可以访问的资源（内存、Socket等）也是分离的。</p><p>进程间通信<br>Inter-Process Communication。</p><p>在多个进程间通信。是指多个进程间传送数据或共享数据的技术。</p><p>竞态条件<br>Race Condition。</p><p>是指同一个资源（内存地址等）被两个以上的使用者访问时发生的程序状态。会引起死锁（Dead Lock，互相等待对方处理结果的情况）等问题。</p><p>扩展性<br>Scalable。</p><p>是指可以扩展系统性能。</p><p>在网络游戏中需要应对用户的增长和饱和，所以希望性能和功能可以轻松扩展。</p><p>浏览器<br>Browser。</p><p>浏览软件。网络游戏中的游戏浏览器范围较广，泛指将服务器网站管理的游戏进度信息展示给玩家的软件。</p><p>例如使用C++语言开发的面向3D游戏的专用程序，或者Flash游戏使用的Google Chrome等Web浏览器。和一般浏览Web服务器数据的Web浏览器有所区别。</p><p>轮询<br>Polling。</p><p>定期询问数据是否送达或者是否接收到的机制。太过频繁的轮询会无端增加CPU的负荷。</p><p>瓶颈<br>Bottleneck。</p><p>系统中性能最弱的部分。系统的其他部分即使再快，如果有一个地方（瓶颈）处理比较慢，就会影响整体的性能。</p><p>冗余<br>Redumdancy。</p><p>作为预备而重复配置。</p><p>游戏数据的冗余是指将数据在不同地方重复保存（主数据和备份数据的关系）。</p><p>事件驱动<br>Event Driven。</p><p>在事件发生时进行处理的编程方式。事件的类型包括接收到数据、鼠标移动等。事件驱动的编程方式常用在网络开发和游戏开发中。</p><p>数据包<br>Packet。</p><p>数据的传输单位。数据包通信是指将数据分割并添加控制信息后发送、接收后再合并的通信方式。TCP协议的数据通信单位是数据段（Segment），UDP/IP协议为数据报（Datagram）。网络游戏开发会经常面临数据包延迟的挑战。</p><p>数据中心<br>Data Center。</p><p>安置提供服务的服务器设施。配备了维持服务器所必需的电源、空调和防灾设施。</p><p>套接字 API<br>Socket API。</p><p>处理网络文件描述符中的套接字 API。个别的函数/系统调用（socket、connect、accept）。</p><p>同时连接数<br>可以同时连接服务的用户数。</p><p>图元<br>Sprite。</p><p>是指电子游戏中使用的可以告诉显示的小图像。事先准备好玩家角色移动等状态的小图片，可以通过指定图像位置，在画面的任意位置显示角色。</p><p>吞吐量<br>Throughput</p><p>系统在一定时间内处理的数量。</p><p>网络拓扑<br>网络中所含的各个计算机以什么结构相连接。计算机是节点，连接叫做边界。包括星状结构、总线结构和网状结构等，可以帮助分析和设计网络结构。</p><p>文件描述符<br>在Unix系的操作系统中，除了文件以外，网络、块设备等操作系统管理的输入输出资源也采用了文件形式。</p><p>线程<br>Thread。</p><p>比进程更细分的程序执行单位。</p><p>延迟<br>处理所需要的时间。</p><p>游戏客户端<br>Game Client。</p><p>指玩家的PC或者游戏机等机器上安装的，启动后可以显示游戏画面、接受用户输入输出的软件。</p><p>游戏逻辑<br>Game Logic</p><p>指连接游戏进度信息和用户界面信息的算法。</p><p>云（Cloud）<br>在云计算中主要是指服务器端的计算机群。</p><p>在单纯的主机托管中，包括存储、负载均衡、付费系统、日志解析等服务器架构中的计算机资源可以根据需要即时调整。</p><p>在内存中<br>把数据放在内存中，可以在几个CPU时钟周期（几纳秒到几百纳秒之间）获取到数据的状态。</p><p>中间件<br>Middleware</p><p>将应用程序普遍使用的功能进行集成的专业化软件。</p><p>纵向扩展 / 横向扩展<br>纵向扩展是指增加内存、升级CPU等，通过提升单台服务器的性能来改善系统性能的方法。</p><p>横向扩展是指通过增加服务器台数来提供系统性能的方法。</p><p>阻塞/非阻塞<br>阻塞是指处理完成之前持续等待。</p><p>例如，收到数据前持续等待的程序（阻塞程序），在等待期间不能进行其他处理。</p><p>采用非阻塞（不持续等待）处理可以解决这个问题。也可以叫做同步调用和非同步调用。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> unity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> unity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>java代码书写规范</title>
+      <link href="/2020/04/06/hexo-frist/"/>
+      <url>/2020/04/06/hexo-frist/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Java编码规范整理汇总"><a href="#Java编码规范整理汇总" class="headerlink" title="Java编码规范整理汇总"></a>Java编码规范整理汇总</h2><p>在Java的入门过程中，我们首先要养成一个良好的编写代码习惯。那么，了解清楚Java的编码规范就显得尤为必要了。编码格式不仅仅是美不美观的问题。这里我们可以试想一下，如果在Java开发中编码不规范，容易出现bug不说，而且后续还难以维护。因此，遵守编码规范可以让代码的风格好像是一个人写出来的，即使是有很多人参与这个开发项目。</p><a id="more"></a><p>1、源文件基础</p><p>源文件以其最顶层的类名来命名，大小写敏感，文件扩展名为 .java。源文件编码格式为UTF-8。除了行结束符序列，ASCII水平空格字符(0x20，即空格)是源文件中唯一允许出现的空白字符，这意味着所有其它字符串中的空白字符都要进行转义；制表符不用于缩进。对于具有特殊转义序列的任何字符(\b, \t, \n, \f, \r, “, ‘及)，我们使用它的转义序列，而不是相应的八进制(比如 \012)或Unicode(比如 \u000a)转义。对于剩余的非ASCII字符，是使用实际的Unicode字符(比如∞)，还是使用等价的Unicode转义符(比如\u221e)，取决于哪个能让代码更易于阅读和理解。</p><p>2、源文件结构</p><p>一个源文件包含(按顺序地)：许可证或版权信息；package语句；import语句；一个顶级类。以上每个部分之间用一个空行隔开。如果一个文件包含许可证或版权信息，那么它应当被放在文件最前面。package语句不换行，列限制(4.4节)并不适用于package语句。import不要使用通配符，不要换行。</p><p>3、格式</p><p>大括号与 if,else,for,do,while语句一起使用，即使只有一条语句(或是空)，也应该把大括号写上。对于非空块和块状结构，大括号遵循Kernighan和Ritchie风格，左大括号前不换行；左大括号后换行；右大括号前换行；如果右大括号是一个语句、函数体或类的终止，则右大括号后换行; 否则不换行。例如，如果右大括号后面是else或逗号，则不换行。一个空的块状结构里什么也不包含，大括号可以简洁地写成 {}，不需要换行。例外：如果它是一个多块语句的一部分(if/else 或 try/catch/finally) ，即使大括号内没内容，右大括号也要换行。每当开始一个新的块，缩进增加2个空格，当块结束时，缩进返回先前的缩进级别。缩进级别适用于代码和注释。</p><p>4、空白</p><p>以下情况需要使用一个空行：类内连续的成员之间：字段，构造函数，方法，嵌套类，静态初始化块，实例初始化块；在函数体内，语句的逻辑分组间使用空行；类内的第一个成员前或最后一个成员后的空行是可选；要满足本文档中其他节的空行要求。除了语言需求和其它规则，并且除了文字，注释和Javadoc用到单个空格，单个ASCII空格也出现在以下几个地方：分隔任何保留字与紧随其后的左括号( ()(如 if,forcatch等)；分隔任何保留字与其前面的右大括号( })(如 else,catch)等等。</p><p>5、命名约定</p><p>对所有标识符都通用的规则，标识符只能使用ASCII字母和数字，因此每个有效的标识符名称都能匹配正则表达式 \w+。类名都以 UpperCamelCase风格编写，方法名都以 lowerCamelCase风格编写；常量名命名模式为 CONSTANT_CASE，全部字母大写，用下划线分隔单词；非常量字段名以 lowerCamelCase风格编写；参数名以 lowerCamelCase风格编写；比起其它类型的名称，局部变量名可以有更为宽松的缩写。、</p><p>6、编程实践</p><p>只要是合法的，就把 @override注解给用上。使用类名调用静态的类成员，而不是具体某个对象或表达式。极少会去重写 Object.finalize。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> web </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>

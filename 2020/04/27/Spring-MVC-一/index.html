@@ -37,17 +37,20 @@
     var CONFIG = {"hostname":"q1021185180.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我的理想很简单：一屋，二人，三餐，四季。仅此而已。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="晗大大の博客">
-<meta property="og:url" content="https://q1021185180.github.io/tags/%E6%9C%BA%E5%AF%86%E6%96%87%E4%BB%B6/index.html">
+  <meta name="description" content="Spring Web MVC是基于Servlet API构建的原始Web框架，从一开始就包含在Spring框架中。正式名称“Spring Web MVC”来自其源模块（spring-webmvc）的名称，但它通常称为“Spring MVC”。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring MVC(一)">
+<meta property="og:url" content="https://q1021185180.github.io/2020/04/27/Spring-MVC-%E4%B8%80/index.html">
 <meta property="og:site_name" content="晗大大の博客">
-<meta property="og:description" content="我的理想很简单：一屋，二人，三餐，四季。仅此而已。">
+<meta property="og:description" content="Spring Web MVC是基于Servlet API构建的原始Web框架，从一开始就包含在Spring框架中。正式名称“Spring Web MVC”来自其源模块（spring-webmvc）的名称，但它通常称为“Spring MVC”。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-27T03:42:06.000Z">
+<meta property="article:modified_time" content="2020-04-27T03:50:21.090Z">
 <meta property="article:author" content="晗大大">
+<meta property="article:tag" content="java">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://q1021185180.github.io/tags/%E6%9C%BA%E5%AF%86%E6%96%87%E4%BB%B6/">
+<link rel="canonical" href="https://q1021185180.github.io/2020/04/27/Spring-MVC-%E4%B8%80/">
 
 
 <script id="page-configurations">
@@ -55,12 +58,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: 机密文件 | 晗大大の博客</title>
+  <title>Spring MVC(一) | 晗大大の博客</title>
   
 
 
@@ -202,57 +205,225 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
   
   
   
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">机密文件
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://q1021185180.github.io/2020/04/27/Spring-MVC-%E4%B8%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/Me.jpg">
+      <meta itemprop="name" content="晗大大">
+      <meta itemprop="description" content="我的理想很简单：一屋，二人，三餐，四季。仅此而已。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="晗大大の博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Spring MVC(一)
+        </h1>
+
+        <div class="post-meta">
+           
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-04-27 11:42:06 / 修改时间：11:50:21" itemprop="dateCreated datePublished" datetime="2020-04-27T11:42:06+08:00">2020-04-27</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a>
+                </span>
+            </span>
+
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>4k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>4 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+        <p>  Spring Web MVC是基于Servlet API构建的原始Web框架，从一开始就包含在Spring框架中。正式名称“Spring Web MVC”来自其源模块（spring-webmvc）的名称，但它通常称为“Spring MVC”。<br>  <a id="more"></a><br>      与Spring Web MVC并行，Spring Framework 5.0引入了一个反应式堆栈Web框架，其名称“Spring WebFlux”也基于其源模块（spring-webflux）。</p>
+<p>DispatcherServlet<br>      和许多其他web框架一样，Spring MVC是围绕前controller 模式设计的，其中一个重要的Servlet   为 DispatcherServlet，请求处理提供了一个共享算法，而实际工作则由可配置的委托组件执行。该模型灵活，支持多种工作流。<br>    DispatcherServlet作为Servlet，都需要使用Java配置或web.xml根据Servlet规范声明和映射。反过来DispatcherServlet使用Spring配置来发现请求映射、view解析、异常处理等所需的委托组件。<br>     以下Java配置示例注册并初始化DispatcherServlet，它由Servlet容器自动检测：<br>public class MyWebApplicationInitializer implements WebApplicationInitializer {</p>
+<pre><code>@Override
+public void onStartup(ServletContext servletCxt) {
+
+    // 加载Spring web应用程序配置
+    AnnotationConfigWebApplicationContext ac = new AnnotationConfigWebApplicationContext();
+    ac.register(AppConfig.class);
+    ac.refresh();
+
+    // 创建并注册DispatcherServlet
+    DispatcherServlet servlet = new DispatcherServlet(ac);
+    ServletRegistration.Dynamic registration = servletCxt.addServlet(&quot;app&quot;, servlet);
+    registration.setLoadOnStartup(1);
+    registration.addMapping(&quot;/app/*&quot;);
+}</code></pre><p>}<br>以下web.xml配置示例注册并初始化DispatcherServlet：<br><web-app></web-app></p>
+<pre><code>&lt;listener&gt;
+    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;context-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;/WEB-INF/app-context.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;servlet&gt;
+    &lt;servlet-name&gt;app&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+        &lt;param-value&gt;&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;app&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/app/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre>
+    Spring Boot遵循不同的初始化顺序。Spring Boot没有连接到Servlet容器的生命周期中，而是使用Spring配置来引导自身和嵌入式Servlet容器。在Spring配置中检测到过滤器和Servlet声明，并将其注册到Servlet容器中。
+
+<p>Context结构<br>    DispatcherServlet需要WebApplicationContext（纯粹ApplicationContext的扩展）作为自己的配置。WebApplicationContext具有一个到ServletContext和Servlet的关联链接。它还绑定到ServletContext，这样应用程序可以在RequestContextUtils上使用静态方法，以便在需要访问WebApplicationContext时查找它。<br>     对于许多应用程序来说，拥有一个WebApplicationContext是简单和足够的。也可以有一个上下文层次结构，其中一个root WebApplicationContext在多个DispatcherServlet（或其他Servlet）实例中共享，每个实例都有自己的子WebApplicationContext配置。<br>     root WebApplicationContext通常包含基础设施bean，例如需要跨多个Servlet实例共享的数据存储库和业务服务。这些bean是有效继承的，可以在特定于Servlet的子WebApplicationContext中重写（即重新声明），该子WebApplicationContext通常包含给定Servlet的本地bean。下图显示了这种关系：</p>
+<p>以下示例配置WebApplicationContext 层级结构：<br>public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {</p>
+<pre><code>@Override
+protected Class&lt;?&gt;[] getRootConfigClasses() {
+    return new Class&lt;?&gt;[] { RootConfig.class };
+}
+
+@Override
+protected Class&lt;?&gt;[] getServletConfigClasses() {
+    return new Class&lt;?&gt;[] { App1Config.class };
+}
+
+@Override
+protected String[] getServletMappings() {
+    return new String[] { &quot;/app1/*&quot; };
+}</code></pre><p>}<br>如果不需要应用程序上下文层次结构，则应用程序可以通过getRootConfigClasses()返回所有配置，并通过getServletConfigClasses()返回null。<br>下面的示例显示了web.xml的等效项：<br><web-app></web-app></p>
+<pre><code>&lt;listener&gt;
+    &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;context-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;/WEB-INF/root-context.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;servlet&gt;
+    &lt;servlet-name&gt;app1&lt;/servlet-name&gt;
+    &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+        &lt;param-value&gt;/WEB-INF/app1-context.xml&lt;/param-value&gt;
+    &lt;/init-param&gt;
+    &lt;load-on-startup&gt;1&lt;/load-on-startup&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+    &lt;servlet-name&gt;app1&lt;/servlet-name&gt;
+    &lt;url-pattern&gt;/app1/*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre>
+如果不需要应用程序上下文层次结构，则应用程序可以仅配置“root”上下文，并将contextConfigLocation Servlet参数保留为空。
+
+<p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
+        
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-04-11T23:18:01+08:00"
-              content="2020-04-11">
-          04-11
-        </time>
-      </div>
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/04/11/hexo%E6%90%AD%E5%BB%BA/%E5%9B%BD%E5%AE%B6%E6%9C%BA%E5%AF%86/" itemprop="url">
-            <span itemprop="name">国家机密</span>
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/Me.jpg">
+            <span class="icon">
+              <i class="fa fa-wechat"></i>
+            </span>
+
+            <span class="label">WeChat</span>
           </a>
-      </div>
+        </div>
 
-    </header>
-  </article>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
+            <span class="label">RSS</span>
+          </a>
+        </div>
     </div>
   </div>
-  
-  
-  
 
-  
 
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/27/%E5%8A%A8%E6%80%81SQL%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/" rel="prev" title="动态SQL一些总结">
+      <i class="fa fa-chevron-left"></i> 动态SQL一些总结
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC80OTUxOS8yNjAxMA=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -453,6 +624,21 @@
 
   
 
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 
 

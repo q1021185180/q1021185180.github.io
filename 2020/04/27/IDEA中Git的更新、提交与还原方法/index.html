@@ -37,12 +37,12 @@
     var CONFIG = {"hostname":"q1021185180.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":true},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；">
+  <meta name="description" content="第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="IDEA中Git的更新、提交与还原方法">
 <meta property="og:url" content="https://q1021185180.github.io/2020/04/27/IDEA%E4%B8%ADGit%E7%9A%84%E6%9B%B4%E6%96%B0%E3%80%81%E6%8F%90%E4%BA%A4%E4%B8%8E%E8%BF%98%E5%8E%9F%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="晗大大の博客">
-<meta property="og:description" content="第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；">
+<meta property="og:description" content="第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20171120192417714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
@@ -57,7 +57,7 @@
 <meta property="og:image" content="https://img-blog.csdn.net/20171120195312180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="og:image" content="https://img-blog.csdn.net/20171120195941337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center">
 <meta property="article:published_time" content="2020-04-27T03:17:14.000Z">
-<meta property="article:modified_time" content="2020-04-27T03:23:19.588Z">
+<meta property="article:modified_time" content="2020-04-27T03:46:27.103Z">
 <meta property="article:author" content="晗大大">
 <meta property="article:tag" content="git">
 <meta property="article:tag" content="java">
@@ -162,17 +162,17 @@
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">6</span></a>
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签<span class="badge">7</span></a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">4</span></a>
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类<span class="badge">5</span></a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">5</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档<span class="badge">7</span></a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -255,7 +255,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-04-27 11:17:14 / 修改时间：11:23:19" itemprop="dateCreated datePublished" datetime="2020-04-27T11:17:14+08:00">2020-04-27</time>
+              <time title="创建时间：2020-04-27 11:17:14 / 修改时间：11:46:27" itemprop="dateCreated datePublished" datetime="2020-04-27T11:17:14+08:00">2020-04-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -292,8 +292,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）；如图1：选择pull进行更新代码操作；<br><img src="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
+        <p>第一步：在提交项目之前必须先对项目进行更新，此项特别重要，如果不进行更新，别人有项目提交到服务器上，那么你的项目将会提交不上去，使用git解决冲突会比较麻烦，即使你解决了冲突，但是有时候不注意会冲掉别人写的代码，不像svn使用那么简单，所以提交自己项目前必须进行更新（特别重要）</p>
 <a id="more"></a>
+<p>；如图1：选择pull进行更新代码操作；<br><img src="https://img-blog.csdn.net/20171120192006829?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
 <p>第二步：更新后的结果如图2、3；其中图2：表示从服务器上更新下来的代码；图3：表示服务器上没有需要更新的代码，当服务器上没有需要更新到本地的代码时，则可以放心的进行提交代码的操作；<br><img src="https://img-blog.csdn.net/20171120192417714?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120192446634?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第三步：1.当确定第二步操作完之后，此时可以进行提交代码的操作，图4中表示中红色的项目表示新创建的项目{注：如果是蓝色，表示修改过的项目}（红色和蓝色都表示待提交项目），如果是红色的，则选择图5：add,如果项目是蓝色，则选择图5.1 ：commit file;<br><img src="https://img-blog.csdn.net/20171120192659004?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193357463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>2.当add操作完成之后项目颜色会变成绿色，如图6，红色表示为进行add操作；<br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br><img src="https://img-blog.csdn.net/20171120193700879?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>3.进行commit Directory操作 如图7：<br><img src="https://img-blog.csdn.net/20171120193846925?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>4.当出现如图8的窗口时，绿色和蓝色表示待提交项目，在这里可以进行相应的勾选，下面的commit message区域填写，模块名称或者提交代码的相应信息，下面的下拉菜单选择commit and push,如红色8区域；<br><img src="https://img-blog.csdn.net/20171120194127109?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>5.如图9：当出现下面窗口时，选择红色区域9部分的push按钮，进行提交项目操作，至此项目提交所以操作完成，需要等几秒钟会有相应提交成功或者是提交失败的提示，如果提交失败则表示，你本地项目没有进行更新，和服务器上的项目有冲突，需要解决冲突，然后才能提交(注：当pull失败时，说明服务器上的代码和本地代码有冲突，这时则需要把本地有冲突的代码备份，然后还原，再pull，这时pull成功后，再把自己备份的代码部分，拷入相应的代码中，这时候再进行push就可以了)。<br><img src="https://img-blog.csdn.net/20171120195312180?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt><br>第四还原操作：如图选择10区域按钮：revert进行还原操作；<br><img src="https://img-blog.csdn.net/20171120195941337?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvZ2VuZzMx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt></p>
 <p>我只是大自然的搬运工！ ————————————————————————————————————————————————————————————————————————————-@晗大大</p>
 
@@ -347,7 +348,10 @@
     <a href="/2020/04/11/hexo%E6%90%AD%E5%BB%BA/%E5%9B%BD%E5%AE%B6%E6%9C%BA%E5%AF%86/" rel="prev" title="国家机密">
       <i class="fa fa-chevron-left"></i> 国家机密
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2020/04/27/%E5%8A%A8%E6%80%81SQL%E4%B8%80%E4%BA%9B%E6%80%BB%E7%BB%93/" rel="next" title="动态SQL一些总结">
+      动态SQL一些总结 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -425,20 +429,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -489,12 +493,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">8k</span>
+    <span title="站点总字数">13k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">7 分钟</span>
+    <span title="站点阅读时长">12 分钟</span>
 </div>
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
@@ -502,7 +506,7 @@
 </span>
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共4.6k字</span>
+  <span class="post-count">博客全站共6k字</span>
 </div>
         
 
